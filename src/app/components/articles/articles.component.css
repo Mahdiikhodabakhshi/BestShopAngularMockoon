@@ -1,0 +1,41 @@
+.card img{
+  height: 20rem;
+  border-radius:15px 15px 0 0 ;
+}
+
+.card{
+  border: none;
+  transition: all 1s ease-out;
+  border-radius:15px 15px 0 0 ;
+}
+
+fa-icon{
+  background-color: white;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.noFav fa-icon{
+  color: black;
+}
+
+.noFav fa-icon:hover{
+  color: red;
+}
+.Fav fa-icon{
+  color: red;
+}
+
+.oldprice{
+  text-decoration: line-through;
+  color: gray;
+  font-size: 12px;
+}
+
+.card:hover{
+  cursor: pointer;
+  box-shadow: gray 1px 1px 5px 5px , gray -1px -1px 5px 5px ;
+  transform: scale(102%);
+}
+
+

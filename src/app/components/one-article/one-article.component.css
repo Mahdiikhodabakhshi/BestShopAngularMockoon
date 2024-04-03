@@ -1,0 +1,44 @@
+.stars fa-icon{
+  color: gray;
+}
+.stars fa-icon:hover{
+  color: gold;
+}
+
+.oldprice{
+  text-decoration: line-through;
+  color: gray;
+  font-size: 12px;
+}
+
+
+.tallaNo , .tallaSi{
+  width: 40px;
+  height: auto;
+  background-color: #f5f5f5;
+  margin-left: 10px;
+  text-align: center;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.tallaNo{
+  color: gray;
+  text-decoration: line-through;
+  border: gray 2px solid;
+
+}
+
+.tallaNo:hover{
+  cursor: default;
+}
+
+.tallaSi{
+  border: black 2px solid;
+  transition: all 0.5s ease-out;
+}
+.tallaSi:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

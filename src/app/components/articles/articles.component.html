@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row g-4">
+    <div class="col-3" *ngFor="let article of articles">
+      <div class="card text-center my-5" [routerLink]="'/oneart/'+article.id" >
+        <img [src]="article.imageURL" class="card-img-top" [alt]="article.name">
+        <div class="card-img-overlay d-flex justify-content-end">
+          <div class="noFav" *ngIf="!article.favourite">
+            <fa-icon [icon]="faHeart"></fa-icon>
+
+          </div>
+
+          <div class="Fav" *ngIf="article.favourite">
+            <fa-icon [icon]="faHeart"></fa-icon>
+
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{article.name}}</h5>
+          <p class="card-text" *ngIf="!article.discounte">
+            {{article.firstPrice | currency:"EUR":"€":'1.2':'es-ES'}}
+          </p>
+          <p class="card-text" *ngIf="article.discounte">
+            <span class="oldprice">{{article.firstPrice | currency:"EUR":"€":'1.2':'es-ES'}}</span>
+            <span style="color: red;font-size: large;font-weight: bold">   {{article.secondPrice | currency:"EUR":"€":'1.2':'es-ES'}}</span>
+
+
+
+<!--            {{article.firstPrice | currency:"EUR":"€":'1.2':'es-ES'}}-->
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

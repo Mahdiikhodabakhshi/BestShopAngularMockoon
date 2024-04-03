@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="row  justify-content-around mt-5">
+    <div class="col-4 ms-4">
+      <img style="height: 80%" [src]="item.imageURLOne" [alt]="item.name">
+    </div>
+
+
+    <div class="col-6  ">
+
+      <div class="d-flex justify-content-end stars">
+        <fa-icon [icon]="faStar"></fa-icon>
+        <fa-icon [icon]="faStar"></fa-icon>
+        <fa-icon [icon]="faStar"></fa-icon>
+        <fa-icon [icon]="faStar"></fa-icon>
+        <fa-icon [icon]="faStar"></fa-icon>
+        <p class="ms-2">Reviews(0)</p>
+      </div>
+
+      <h3>{{item.name}}</h3>
+      <h4  *ngIf="!item.discounte">
+        {{item.firstPrice | currency:"EUR":"€":'1.2':'es-ES'}}
+      </h4>
+      <h4  *ngIf="item.discounte">
+        <span class="oldprice">{{item.firstPrice | currency:"EUR":"€":'1.2':'es-ES'}}</span>
+        <span style="color: red;font-size: large;font-weight: bold">   {{item.secondPrice | currency:"EUR":"€":'1.2':'es-ES'}}</span>
+      </h4>
+
+      <div class="my-5">
+        <p>color: <strong>Multicolor</strong></p>
+        <img style="height: 7rem" [src]="item.imageURLOne" alt="{{item.id}}">
+      </div>
+
+      <div class="tAv ">
+        <p>Size: <strong>Choose size</strong></p>
+        <div class="d-flex">
+          <div *ngFor="let size of tallasDis" class="tallaNo">{{size}}</div>
+          <div *ngFor="let size of tallasNoDis" class="tallaSi">{{size}}</div>
+
+        </div>
+      </div>
+
+
+      <div class="btns mt-5 ms-3 ">
+        <button type="button" class="btn btn-dark me-3"> <fa-icon [icon]="faEnvelope"></fa-icon> Wait list </button>
+        <button type="button" class="btn btn-outline-dark">Wishlist <fa-icon [icon]="faHeart"></fa-icon> </button>
+      </div>
+    </div>
+  </div>
+</div>

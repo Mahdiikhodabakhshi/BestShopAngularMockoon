@@ -1,0 +1,21 @@
+.des{
+    position: relative;
+    top: -25rem;
+    left: 55rem;
+    font-size: 3rem;
+}
+
+.catCard:hover{
+
+  box-shadow:1px 1px 8px 2px gray ;
+  cursor: pointer;
+}
+
+.catCard{
+  transition: all 1s ease-in-out;
+}
+
+.mycard:hover .card:not(:hover){
+  opacity: 0.5;
+  transform: scale(0.9);
+}

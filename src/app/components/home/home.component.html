@@ -1,0 +1,61 @@
+<!-- CAROUSEL -->
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active " [ngStyle]="{'height' : '30rem'}" *ngFor="let slider of sliders" >
+      <img [src]="slider.imageUrl" class=" d-block  w-100 " alt="..." [ngStyle]="{'height' : '30rem'}">
+      <h3 class="des"  >{{slider.description}} </h3>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- CAROUSEL -->
+
+<div class="container-fluid ">
+  <!-- CARDS -->
+
+  <div class="row d-flex justify-content-around my-3 ">
+      <div class="col-4 " *ngFor="let card of cards">
+        <div class="card text-bg-dark "  >
+          <img [src]="card.imageUrl" class="card-img" [alt]="card.description">
+          <div class="card-img-overlay">
+            <h5 class="card-title text-primary">{{card.description}}</h5>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <!-- CARDS -->
+
+  <!-- CATEGORY -->
+
+  <h3 class="text-center mt-5 mb-4">Shop by category</h3>
+  <div class="row d-flex justify-content-center mycard  my-3">
+      <div class="col-2 " *ngFor="let category of categories">
+
+          <div class="card catCard" routerLink = "/articles"  >
+            <img [src]="category.imageUrl" class="card-img-top" [alt]="category.description">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{category.description}}</h5>
+            </div>
+          </div>
+      </div>
+    </div>
+  <!-- CATEGORY -->
+
+</div>
+
+
+
+
+
+
+
